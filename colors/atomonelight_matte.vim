@@ -403,8 +403,8 @@ call s:h("LspInformationText",      {"fg": s:function, "gui": "bold", "cterm": "
 call s:h("LspInformationVirtualText", {"fg": s:function, "gui": "italic", "cterm": "italic"})
 call s:h("LspInfoSign",             {"fg": s:function})
 
-call s:h("LspHintText",             {"fg": s:string, "gui": "bold", "cterm": "bold"})
-call s:h("LspHintVirtualText",      {"fg": s:string, "gui": "italic", "cterm": "italic"})
+call s:h("LspHintText",             {"fg": s:comment, "gui": "bold", "cterm": "bold"})
+call s:h("LspHintVirtualText",      {"fg": s:comment, "gui": "italic", "cterm": "italic"})
 call s:h("LspHintSign",             {"fg": s:string})
 
 call s:h("LspReferenceHighlight",   {"bg": {"gui": "#e2e0e1", "cterm": "254"}})
