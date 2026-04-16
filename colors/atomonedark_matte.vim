@@ -384,6 +384,38 @@ if has('nvim')
   let g:terminal_color_15 = s:syntax_bg
 endif
 
+
+" ===================================================================
+" LSP SUPPORT - One Half Matte Light Theme
+" ===================================================================
+" Add this block to the end of your atomonelight_matte.vim file
+" Place after the TreeSitter highlights section
+
+call s:h("LspErrorText",            {"fg": s:variable, "gui": "bold", "cterm": "bold"})
+call s:h("LspErrorVirtualText",     {"fg": s:variable, "gui": "italic", "cterm": "italic"})
+call s:h("LspErrorSign",            {"fg": s:variable})
+
+call s:h("LspWarningText",          {"fg": s:number, "gui": "bold", "cterm": "bold"})
+call s:h("LspWarningVirtualText",   {"fg": s:number, "gui": "italic", "cterm": "italic"})
+call s:h("LspWarningSign",          {"fg": s:number})
+
+call s:h("LspInformationText",      {"fg": s:function, "gui": "bold", "cterm": "bold"})
+call s:h("LspInformationVirtualText", {"fg": s:function, "gui": "italic", "cterm": "italic"})
+call s:h("LspInfoSign",             {"fg": s:function})
+
+call s:h("LspHintText",             {"fg": s:string, "gui": "bold", "cterm": "bold"})
+call s:h("LspHintVirtualText",      {"fg": s:string, "gui": "italic", "cterm": "italic"})
+call s:h("LspHintSign",             {"fg": s:string})
+
+call s:h("LspReferenceHighlight",   {"bg": {"gui": "#e2e0e1", "cterm": "254"}})
+call s:h("LspHover",                {"bg": {"gui": "#d8d6d7", "cterm": "252"}})
+
+" Aliases for vim-lsp compatibility
+highlight link LspDiagnosticsError LspErrorText
+highlight link LspDiagnosticsWarning LspWarningText
+highlight link LspDiagnosticsInformation LspInformationText
+highlight link LspDiagnosticsHint LspHintText
+
 " ===================================================================
 " LEGACY SUPPORT
 " ===================================================================
