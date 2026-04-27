@@ -199,6 +199,25 @@ call s:h("javascriptNull",       {"fg": s:number})
 call s:h("javascriptGlobal",     {"fg": s:variable})
 call s:h("javascriptStatement",  {"fg": s:keyword})
 
+call s:h("jsStorageClass",      {"fg": s:keyword}) 
+call s:h("jsVariableDef",       {"fg": s:variable})
+call s:h("jsIdentifier",        {"fg": s:fg})
+call s:h("jsFuncArgs",          {"fg": s:variable, "gui": "italic", "cterm": "italic"})
+call s:h("jsFunction",          {"fg": s:keyword})
+call s:h("jsOperator",          {"fg": s:keyword})
+
+" JSDoc (vim-javascript)
+call s:h("jsDocTags",           {"fg": s:keyword}) " @param, @return
+call s:h("jsDocType",           {"fg": s:number})  " {number}, {number[]}
+call s:h("jsDocParam",          {"fg": s:variable}) " nums1, m
+call s:h("jsDocTypeNoParam",    {"fg": s:number})
+
+" JSDoc
+call s:h("javaScriptDocTags",   {"fg": s:keyword})
+call s:h("javaScriptDocParam",  {"fg": s:variable})
+call s:h("javaScriptDocSeeTag", {"fg": s:keyword})
+
+
 " Python
 call s:h("pythonOperator",       {"fg": s:keyword})
 call s:h("pythonRepeat",         {"fg": s:keyword})
